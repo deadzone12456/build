@@ -3,6 +3,9 @@
 # Repo Init
 repo init -u https://github.com/LineageOS/android.git -b lineage-22.0 --git-lfs
 
+# Sync the repositories
+/opt/crave/resync.sh
+
 # Remove existing directories
 
 rm -rf device/oneplus/fajita
