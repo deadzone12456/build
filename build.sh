@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Repo Init
-repo init -u https://github.com/LineageOS/android.git -b lineage-22.0 --git-lfs
+repo init -u https://github.com/ProjectPixelage/android_manifest.git -b 15 --git-lfs
 
 # Sync the repositories
 /opt/crave/resync.sh
@@ -18,8 +18,8 @@ rm -rf hardware/oneplus
 # Clone repositories #
 
 # Device
-git clone https://github.com/shinichi-c/android_device_oneplus_fajita_15 --depth=1 -b lineage-22.0 device/oneplus/fajita
-git clone https://github.com/shinichi-c/android_device_oneplus_sdm845-common_15 --depth=1 -b lineage-22.0 device/oneplus/sdm845-common
+git clone https://github.com/shinichi-c/android_device_oneplus_fajita_15 --depth=1 -b pixelage device/oneplus/fajita
+git clone https://github.com/shinichi-c/android_device_oneplus_sdm845-common_15 --depth=1 -b pixelage device/oneplus/sdm845-common
 
 # Vendor
 git clone https://github.com/TheMuppets/proprietary_vendor_oneplus_fajita --depth=1 -b lineage-22.0 vendor/oneplus/fajita
@@ -32,7 +32,7 @@ git clone https://github.com/LineageOS/android_kernel_oneplus_sdm845 --depth=1 -
 git clone https://github.com/LineageOS/android_hardware_oneplus --depth=1 -b lineage-22.0 hardware/oneplus
 
 # Lunch
+export PIXELAGE_BUILD="fajita"
 source build/envsetup.sh
-curl https://raw.githubusercontent.com/shinichi-c/build_construction/refs/heads/pick.sh/pick.sh | bash
-lunch lineage_fajita-ap3a-userdebug
-m bacon
+lunch pixelage_fajita-ap3a-userdebug
+mka bacon
