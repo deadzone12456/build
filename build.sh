@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Repo Init
-repo init -u https://github.com/ProjectBlaze/manifest -b 15 --git-lfs
+repo init -u https://github.com/ProjectBlaze-Reborn/manifest.git -b 15 --git-lfs --depth=1
 
 # Sync the repositories
 /opt/crave/resync.sh
