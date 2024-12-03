@@ -24,7 +24,6 @@ rm -rf vendor/lindroid
 rm -rf external/lxc
 rm -rf frameworks/native
 rm -rf frameworks/base
-rm -rf hardware/qcom-caf/wlan
 rm -rf vendor/blaze
 
 # Clone repositories #
@@ -62,8 +61,6 @@ git clone https://github.com/Linux-on-droid/external_lxc --depth=1 -b lindroid-2
 git clone https://github.com/shinichi-c/frameworks_native_blaze --depth=1 -b 15 frameworks/native
 git clone https://github.com/shinichi-c/platform_frameworks_base_blaze --depth=1 -b 15 frameworks/base
 
-# wlan
-git clone https://github.com/shinichi-c/hardware_qcom-caf_wlan --depth=1 -b 15 hardware/qcom-caf/wlan
 
 # Lunch
 source build/envsetup.sh
