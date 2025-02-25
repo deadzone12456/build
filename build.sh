@@ -25,31 +25,6 @@ rm -rf external/lxc
 rm -rf frameworks/native
 rm -rf frameworks/base
 
-# gms
-
-# Configuration
-FILE_URL="https://raw.githubusercontent.com/shinichi-c/Gms/pixelage/common-vendor.mk"
-OUTPUT_DIR="vendor/gms/common"  # Target directory
-OUTPUT_FILE="common-vendor.mk"   # Filename
-OUTPUT_PATH="${OUTPUT_DIR}/${OUTPUT_FILE}"  # Full path
-
-# Create directory (if it doesn't exist)
-sudo mkdir -p "$OUTPUT_DIR"
-
-# Delete old file (if exists)
-sudo rm -f "$OUTPUT_PATH"
-
-# Download the new file to the target directory
-sudo wget "$FILE_URL" -O "$OUTPUT_PATH"
-
-# Check if download succeeded
-if [ $? -eq 0 ]; then
-  echo "Success: File saved to $OUTPUT_PATH"
-else
-  echo "Error: Failed to download. Check permissions, URL, or network."
-  exit 1
-fi
-
 # Clone repositories #
 # Clang
 git clone https://gitlab.com/kei-space/clang/r522817 prebuilts/clang/host/linux-x86/
@@ -88,5 +63,30 @@ git clone https://github.com/shinichi-c/frameworks_base --depth=1 -b fifteen fra
 
 # Lunch
 source build/envsetup.sh
+# gms
+
+# Configuration
+FILE_URL="https://raw.githubusercontent.com/shinichi-c/Gms/pixelage/common-vendor.mk"
+OUTPUT_DIR="vendor/gms/common"  # Target directory
+OUTPUT_FILE="common-vendor.mk"   # Filename
+OUTPUT_PATH="${OUTPUT_DIR}/${OUTPUT_FILE}"  # Full path
+
+# Create directory (if it doesn't exist)
+sudo mkdir -p "$OUTPUT_DIR"
+
+# Delete old file (if exists)
+sudo rm -f "$OUTPUT_PATH"
+
+# Download the new file to the target directory
+sudo wget "$FILE_URL" -O "$OUTPUT_PATH"
+
+# Check if download succeeded
+if [ $? -eq 0 ]; then
+  echo "Success: File saved to $OUTPUT_PATH"
+else
+  echo "Error: Failed to download. Check permissions, URL, or network."
+  exit 1
+fi
+
 lunch aosp_fajita-ap4a-userdebug
 mka bacon
