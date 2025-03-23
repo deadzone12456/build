@@ -48,7 +48,7 @@ git clone https://github.com/shinichi-c/display --depth=1 -b upstream hardware/q
 
 # Sepolicy
 git clone https://github.com/shinichi-c/android_device_pixelage_sepolicy --depth=1 device/lineage/sepolicy
-git clone https://github.com/shinichi-c/android_device_qcom_sepolicy_vndr --depth=1 -b lineage-22.0-legacy-um device/qcom/sepolicy_vndr/legacy-um
+git clone https://github.com/shinichi-c/android_device_qcom_sepolicy_vndr --depth=1 -b lineage-22.2-legacy-um device/qcom/sepolicy_vndr/legacy-um
 
 # framework
 git clone https://github.com/shinichi-c/android_frameworks_native_pixelage --depth=1 -b 15-Qpr2 frameworks/native
