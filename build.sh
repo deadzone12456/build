@@ -54,6 +54,9 @@ git clone https://github.com/shinichi-c/android_device_qcom_sepolicy_vndr --dept
 git clone https://github.com/shinichi-c/android_frameworks_native_pixelage --depth=1 -b 15-Qpr2 frameworks/native
 git clone https://github.com/shinichi-c/android_frameworks_base_pixelage --depth=1 -b 15-Qpr2 frameworks/base
 
+git clone https://github.com/shinichi-c/android_hardware_qcom_bootctrl --depth=1 -b lineage-22.2-caf hardware/qcom-caf/bootctrl
+
+
 # Lunch
 export PIXELAGE_BUILD="fajita"
 source build/envsetup.sh
