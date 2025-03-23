@@ -21,6 +21,7 @@ rm -rf device/lineage/sepolicy
 rm -rf device/qcom/sepolicy_vndr/legacy-um
 rm -rf frameworks/native
 rm -rf frameworks/base
+rm -rf hardware/qcom-caf/bootctrl
 
 # Clone repositories #
 # Clang
