@@ -60,6 +60,6 @@ git clone https://github.com/shinichi-c/android_hardware_qcom_bootctrl --depth=1
 # Lunch
 export PIXELAGE_BUILD="fajita"
 source build/envsetup.sh
-lunch pixelage_fajita-bp1a-eng
+lunch pixelage_fajita-bp1a-userdebug
 make installclean
 mka bacon
