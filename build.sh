@@ -22,13 +22,16 @@ rm -rf device/qcom/sepolicy_vndr/legacy-um
 rm -rf frameworks/native
 rm -rf frameworks/base
 rm -rf hardware/qcom-caf/bootctrl
+rm -rf external/libhybris
+rm -rf vendor/lindroid
+rm -rf external/lxc
 
 # Clone repositories #
 # Clang
 git clone https://gitlab.com/kei-space/clang/r522817 prebuilts/clang/host/linux-x86/
 
 # Device
-git clone https://github.com/shinichi-c/android_device_oneplus_fajita_15 --depth=1 -b lineage-22.2 device/oneplus/fajita
+git clone https://github.com/shinichi-c/android_device_oneplus_fajita_15 --depth=1 -b lindroid device/oneplus/fajita
 git clone https://github.com/shinichi-c/android_device_oneplus_sdm845-common_15 --depth=1 -b bootctrl device/oneplus/sdm845-common
 
 # Vendor
@@ -54,8 +57,13 @@ git clone https://github.com/shinichi-c/android_device_qcom_sepolicy_vndr --dept
 git clone https://github.com/shinichi-c/android_frameworks_native_pixelage --depth=1 -b 15-Qpr2 frameworks/native
 git clone https://github.com/shinichi-c/android_frameworks_base_pixelage --depth=1 -b revert frameworks/base
 
+# bootctrl
 git clone https://github.com/shinichi-c/android_hardware_qcom_bootctrl --depth=1 -b lineage-22.2-caf hardware/qcom-caf/bootctrl
 
+# lindroid
+git clone https://github.com/shinichi-c/libhybris --depth=1 -b lindroid-21 external/libhybris
+git clone https://github.com/shinichi-c/vendor_lindroid --depth=1 -b lindroid-22.1 vendor/lindroid
+git clone https://github.com/Linux-on-droid/external_lxc --depth=1 -b lindroid-21 external/lxc
 
 # Lunch
 export PIXELAGE_BUILD="fajita"
