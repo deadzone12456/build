@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Repo Init
-repo init -u https://github.com/ProjectPixelage/android_manifest.git -b 15 --git-lfs
+repo init -u https://github.com/Evolution-X/manifest -b bka --git-lfs
 
 # Sync the repositories
 /opt/crave/resync.sh
@@ -54,6 +54,5 @@ git clone https://github.com/shinichi-c/android_hardware_qcom_bootctrl --depth=1
 #lunch
 export PIXELAGE_BUILD="fajita"
 source build/envsetup.sh
-lunch pixelage_fajita-bp1a-userdebug
-make installclean
+lunch lineage_fajita-bp2a-userdebug
 mka bacon
