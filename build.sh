@@ -20,7 +20,6 @@ rm -rf hardware/qcom-caf/sdm845/display
 rm -rf device/lineage/sepolicy
 rm -rf device/qcom/sepolicy_vndr/legacy-um
 rm -rf hardware/qcom-caf/bootctrl
-rm -rf vendor/qcom/opensource/dataservices
 rm -rf build/make
 rm -rf vendor/lineage
 
@@ -30,7 +29,7 @@ git clone https://gitlab.com/kei-space/clang/r522817 prebuilts/clang/host/linux-
 
 # Device
 git clone https://github.com/shinichi-c/android_device_oneplus_fajita_15 --depth=1 -b Evo_16 device/oneplus/fajita
-git clone https://github.com/shinichi-c/android_device_oneplus_sdm845-common_15 --depth=1 -b Evo_16 device/oneplus/sdm845-common
+git clone https://github.com/shinichi-c/android_device_oneplus_sdm845-common_15 --depth=1 -b rebase16 device/oneplus/sdm845-common
 
 # Vendor
 git clone https://github.com/TheMuppets/proprietary_vendor_oneplus_fajita --depth=1 -b lineage-22.0 vendor/oneplus/fajita
@@ -44,7 +43,7 @@ git clone https://github.com/shinichi-c/android_hardware_oneplus --depth=1 -b pi
 
 # Hals
 git clone https://github.com/shinichi-c/media --depth=1 -b upstream hardware/qcom-caf/sdm845/media
-git clone https://github.com/shinichi-c/audio --depth=1 -b pixelage hardware/qcom-caf/sdm845/audio
+git clone https://github.com/shinichi-c/audio --depth=1 -b update hardware/qcom-caf/sdm845/audio
 git clone https://github.com/shinichi-c/display --depth=1 -b upstream hardware/qcom-caf/sdm845/display
 
 # Sepolicy
@@ -53,9 +52,6 @@ git clone https://github.com/shinichi-c/device_qcom_sepolicy_vndr_evo --depth=1 
 
 # bootctrl
 git clone https://github.com/shinichi-c/android_hardware_qcom_bootctrl --depth=1 -b lineage-22.2-caf hardware/qcom-caf/bootctrl
-
-# dataservice
-git clone https://github.com/shinichi-c/android_vendor_qcom_opensource_dataservices --depth=1 -b lineage-22.2 vendor/qcom/opensource/dataservices
 
 # build/make
 git clone https://github.com/shinichi-c/build_evo --depth=1 -b bka build/make
@@ -134,4 +130,5 @@ fi
 echo "Script completed."
 
 lunch lineage_fajita-bp2a-userdebug
+make installclean
 m evolution
