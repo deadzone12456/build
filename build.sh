@@ -20,8 +20,8 @@ rm -rf hardware/qcom-caf/sdm845/display
 rm -rf device/lineage/sepolicy
 rm -rf device/qcom/sepolicy_vndr/legacy-um
 rm -rf hardware/qcom-caf/bootctrl
-rm -rf build/make
-rm -rf vendor/lineage
+#rm -rf build/make
+#rm -rf vendor/lineage
 
 # Clone repositories #
 # Clang
@@ -47,19 +47,20 @@ git clone https://github.com/shinichi-c/audio --depth=1 -b update hardware/qcom-
 git clone https://github.com/shinichi-c/display --depth=1 -b upstream hardware/qcom-caf/sdm845/display
 
 # Sepolicy
-git clone https://github.com/shinichi-c/device_evolution_sepolicy --depth=1 device/lineage/sepolicy
+git clone https://github.com/shinichi-c/device_evolution_sepolicy --depth=1 -b bka2 device/lineage/sepolicy
 git clone https://github.com/shinichi-c/device_qcom_sepolicy_vndr_evo --depth=1 -b bka-legacy-um device/qcom/sepolicy_vndr/legacy-um
 
 # bootctrl
 git clone https://github.com/shinichi-c/android_hardware_qcom_bootctrl --depth=1 -b lineage-22.2-caf hardware/qcom-caf/bootctrl
 
 # build/make
-git clone https://github.com/shinichi-c/build_evo --depth=1 -b bka build/make
+##git clone https://github.com/shinichi-c/build_evo --depth=1 -b bka build/make
 
 # vendor/lineage
-git clone https://github.com/shinichi-c/vendor_evolution --depth=1 -b bka2 vendor/lineage
+##git clone https://github.com/shinichi-c/vendor_evolution --depth=1 -b bka vendor/lineage
 
 #lunch
+export PIXELAGE_BUILD="fajita"
 source build/envsetup.sh
 
 #!/bin/bash
