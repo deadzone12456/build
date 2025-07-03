@@ -1,5 +1,7 @@
 #!/bin/bash
 
+rm -rf prebuilts/clang/host/linux-x86
+
 # Repo Init
 repo init -u https://github.com/Evolution-X/manifest -b bka --git-lfs
 
