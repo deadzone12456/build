@@ -27,7 +27,7 @@ rm -rf hardware/qcom-caf/bootctrl
 
 # Clone repositories #
 # Clang
-git clone https://gitlab.com/kei-space/clang/r522817 prebuilts/clang/host/linux-x86/
+##git clone https://gitlab.com/kei-space/clang/r522817 prebuilts/clang/host/linux-x86/
 
 # Device
 git clone https://github.com/shinichi-c/android_device_oneplus_fajita_15 --depth=1 -b Evo_16 device/oneplus/fajita
