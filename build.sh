@@ -22,12 +22,13 @@ rm -rf hardware/qcom-caf/sdm845/display
 rm -rf device/lineage/sepolicy
 rm -rf device/qcom/sepolicy_vndr/legacy-um
 rm -rf hardware/qcom-caf/bootctrl
-#rm -rf build/make
-#rm -rf vendor/lineage
+rm -rf external/libhybris
+rm -rf vendor/lindroid
+rm -rf external/lxc
+rm -rf frameworks/native
+rm -rf frameworks/base
 
 # Clone repositories #
-# Clang
-##git clone https://gitlab.com/kei-space/clang/r522817 prebuilts/clang/host/linux-x86/
 
 # Device
 git clone https://github.com/shinichi-c/android_device_oneplus_fajita_15 --depth=1 -b Evo_16 device/oneplus/fajita
@@ -55,82 +56,16 @@ git clone https://github.com/shinichi-c/device_qcom_sepolicy_vndr_evo --depth=1 
 # bootctrl
 git clone https://github.com/shinichi-c/android_hardware_qcom_bootctrl --depth=1 -b lineage-22.2-caf hardware/qcom-caf/bootctrl
 
-# build/make
-##git clone https://github.com/shinichi-c/build_evo --depth=1 -b bka build/make
+# framework
+git clone https://github.com/shinichi-c/frameworks_native_evo16 --depth=1 -b bka frameworks/native
+git clone https://github.com/shinichi-c/frameworks_base_evo --depth=1 -b bka frameworks/base
 
-# vendor/lineage
-##git clone https://github.com/shinichi-c/vendor_evolution --depth=1 -b bka vendor/lineage
+# lindroid
+git clone https://github.com/Linux-on-droid/libhybris --depth=1 -b tmp external/libhybris
+git clone https://github.com/shinichi-c/vendor_lindroid --depth=1 -b lindroid-22.1 vendor/lindroid
+git clone https://github.com/Linux-on-droid/external_lxc --depth=1 -b lindroid-21 external/lxc
 
 #lunch
-export PIXELAGE_BUILD="fajita"
 source build/envsetup.sh
-
-#!/bin/bash
-
-# Define the target directory and file name
-TARGET_DIR="hardware/google/pixel/kernel_headers"
-FILE_NAME="Android.bp"
-FULL_PATH="${TARGET_DIR}/${FILE_NAME}"
-
-# Define the raw GitHub URL of your new Android.bp file
-# IMPORTANT: REPLACE THIS WITH THE ACTUAL RAW GITHUB URL OF YOUR FILE
-# Example: https://raw.githubusercontent.com/your-username/your-repo/your-branch/path/to/Android.bp
-GITHUB_RAW_URL="https://raw.githubusercontent.com/shinichi-c/android_device_oneplus_fajita_15/refs/heads/lineage-22.1/Android.bp" 
-
-# Check if the GITHUB_RAW_URL has been updated
-if [ "$GITHUB_RAW_URL" = "YOUR_RAW_GITHUB_URL_HERE" ]; then
-    echo "Error: Please update the 'GITHUB_RAW_URL' variable in the script with the actual raw GitHub URL of your Android.bp file."
-    exit 1
-fi
-
-# Create the target directory if it doesn't exist
-echo "Ensuring target directory exists: $TARGET_DIR..."
-mkdir -p "$TARGET_DIR"
-if [ $? -ne 0 ]; then
-    echo "Error: Could not create or access directory $TARGET_DIR. Check permissions."
-    exit 1
-fi
-
-# Navigate to the target directory
-echo "Navigating to $TARGET_DIR..."
-cd "$TARGET_DIR" || { echo "Error: Could not change directory to $TARGET_DIR"; exit 1; }
-
-# Delete the existing file if it exists
-echo "Attempting to delete existing $FILE_NAME..."
-if [ -f "$FILE_NAME" ]; then
-    rm -f "$FILE_NAME"
-    if [ $? -eq 0 ]; then
-        echo "Existing $FILE_NAME deleted successfully."
-    else
-        echo "Error: Could not delete existing $FILE_NAME. Check permissions."
-        exit 1
-    fi
-else
-    echo "No existing $FILE_NAME found to delete."
-fi
-
-# Download the new file from GitHub
-echo "Downloading new $FILE_NAME from $GITHUB_RAW_URL..."
-curl -sL "$GITHUB_RAW_URL" -o "$FILE_NAME"
-if [ $? -eq 0 ]; then
-    echo "New $FILE_NAME downloaded successfully."
-else
-    echo "Error: Could not download new $FILE_NAME from GitHub. Check URL or network connection."
-    exit 1
-fi
-
-# Set full permissions (777) for the new file
-echo "Setting full permissions (777) for $FILE_NAME..."
-chmod 777 "$FILE_NAME"
-if [ $? -eq 0 ]; then
-    echo "Permissions set successfully."
-else
-    echo "Error: Could not set permissions for $FILE_NAME."
-    exit 1
-fi
-
-echo "Script completed."
-
 lunch lineage_fajita-bp2a-userdebug
-make installclean
 m evolution
