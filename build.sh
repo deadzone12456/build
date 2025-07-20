@@ -22,7 +22,6 @@ rm -rf hardware/qcom-caf/sdm845/display
 rm -rf device/lineage/sepolicy
 rm -rf device/qcom/sepolicy_vndr/legacy-um
 rm -rf hardware/qcom-caf/bootctrl
-rm -rf hardware/qcom-caf/common
 rm -rf external/libhybris
 rm -rf vendor/lindroid
 rm -rf external/lxc
@@ -56,9 +55,6 @@ git clone https://github.com/shinichi-c/android_device_qcom_sepolicy_vndr --dept
 
 # bootctrl
 git clone https://github.com/shinichi-c/android_hardware_qcom_bootctrl --depth=1 -b lineage-22.2-caf hardware/qcom-caf/bootctrl
-
-# qcom-caf_common
-git clone https://github.com/shinichi-c/android_hardware_qcom-caf_common --depth=1 -b lineage-23.0 hardware/qcom-caf/common
 
 # framework
 git clone https://github.com/shinichi-c/frameworks_native_evo16 --depth=1 -b bka frameworks/native
