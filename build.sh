@@ -16,12 +16,13 @@ rm -rf vendor/oneplus/fajita
 rm -rf vendor/oneplus/sdm845-common
 rm -rf kernel/oneplus/sdm845
 rm -rf hardware/oneplus
-rm -rf hardware/qcom-caf/sdm845/media
+rm -rf hardware/qcom-caf/sm8250/media
 rm -rf hardware/qcom-caf/sdm845/audio
-rm -rf hardware/qcom-caf/sdm845/display
+rm -rf hardware/qcom-caf/sm8250/display
 rm -rf device/lineage/sepolicy
 rm -rf device/qcom/sepolicy_vndr/legacy-um
 rm -rf hardware/qcom-caf/bootctrl
+rm -rf hardware/qcom-caf/common
 rm -rf external/libhybris
 rm -rf vendor/lindroid
 rm -rf external/lxc
@@ -45,9 +46,9 @@ git clone https://github.com/shinichi-c/android_kernel_qcom_sdm845 --depth=1 -b 
 git clone https://github.com/shinichi-c/android_hardware_oneplus --depth=1 -b lineage-23.0 hardware/oneplus
 
 # Hals
-git clone https://github.com/shinichi-c/media --depth=1 -b upstream hardware/qcom-caf/sdm845/media
-git clone https://github.com/shinichi-c/audio --depth=1 -b update hardware/qcom-caf/sdm845/audio
-git clone https://github.com/shinichi-c/display --depth=1 -b upstream hardware/qcom-caf/sdm845/display
+git clone https://github.com/shinichi-c/android_hardware_qcom_media --depth=1 -b lineage-23.0-caf-sm8150 hardware/qcom-caf/sm8250/media
+git clone https://github.com/shinichi-c/android_hardware_qcom_audio --depth=1 -b lineage-23.0-caf-sm8250 hardware/qcom-caf/sdm845/audio
+git clone https://github.com/shinichi-c/android_hardware_qcom_display --depth=1 -b lineage-23.0-caf-sm8250 hardware/qcom-caf/sm8250/display
 
 # Sepolicy
 git clone https://github.com/shinichi-c/android_device_lineage_sepolicy --depth=1 -b evox-16 device/lineage/sepolicy
@@ -55,6 +56,9 @@ git clone https://github.com/shinichi-c/android_device_qcom_sepolicy_vndr --dept
 
 # bootctrl
 git clone https://github.com/shinichi-c/android_hardware_qcom_bootctrl --depth=1 -b lineage-22.2-caf hardware/qcom-caf/bootctrl
+
+# qcom-caf_common
+git clone https://github.com/shinichi-c/android_hardware_qcom-caf_common --depth=1 -b lineage-23.0 hardware/qcom-caf/common
 
 # framework
 git clone https://github.com/shinichi-c/frameworks_native_evo16 --depth=1 -b bka frameworks/native
