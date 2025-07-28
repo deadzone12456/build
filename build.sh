@@ -29,23 +29,23 @@ rm -rf vendor/lindroid
 rm -rf external/lxc
 rm -rf frameworks/native
 rm -rf frameworks/base
-rm -rf bionic
 
 # Clone repositories #
 
 # Device
 git clone https://github.com/shinichi-c/android_device_oneplus_fajita_15 --depth=1 -b Evo_16 device/oneplus/fajita
-git clone https://github.com/shinichi-c/android_device_oneplus_sdm845-common_16 --depth=1 -b Dyn-lineage-23.0-4.19 device/oneplus/sdm845-common
+git clone https://github.com/shinichi-c/android_device_oneplus_sdm845-common_16 --depth=1 -b lineage-23.0-opcam device/oneplus/sdm845-common
 
 # Vendor
 git clone https://github.com/TheMuppets/proprietary_vendor_oneplus_fajita --depth=1 -b lineage-22.2 vendor/oneplus/fajita
-git clone https://github.com/shinichi-c/proprietary_vendor_oneplus_sdm845-common --depth=1 -b lineage-23.0-4.19 vendor/oneplus/sdm845-common
+git clone https://github.com/shinichi-c/proprietary_vendor_oneplus_sdm845-common --depth=1 -b lineage-opcam vendor/oneplus/sdm845-common
+git clone https://gitlab.com/Terminator-J/proprietary_vendor_oneplus_camera --depth=1 -b 15.0-op6-test vendor/oneplus/camera
 
 # Kernel
 git clone https://github.com/shinichi-c/android_kernel_oneplus_sdm845 --depth=1 -b lineage-23.0-4.19 kernel/oneplus/sdm845
 
 # Hardware
-git clone https://github.com/shinichi-c/android_hardware_oneplus --depth=1 -b lineage-23.0 hardware/oneplus
+git clone https://github.com/shinichi-c/android_hardware_oneplus --depth=1 -b lineage-23.0-opcam hardware/oneplus
 
 # Hals
 git clone https://github.com/shinichi-c/android_hardware_qcom_media --depth=1 -b lineage-23.0-caf-sm8150 hardware/qcom-caf/sm8250/media
@@ -61,7 +61,7 @@ git clone https://github.com/shinichi-c/android_device_qcom_sepolicy_vndr --dept
 git clone https://github.com/shinichi-c/android_hardware_qcom_bootctrl --depth=1 -b lineage-22.2-caf hardware/qcom-caf/bootctrl
 
 # qcom-caf_common
-git clone https://github.com/shinichi-c/android_hardware_qcom-caf_common --depth=1 -b lineage-23 hardware/qcom-caf/common
+git clone https://github.com/shinichi-c/android_hardware_qcom-caf_common --depth=1 -b lineage-23.0 hardware/qcom-caf/common
 
 # framework
 git clone https://github.com/shinichi-c/frameworks_native_evo16 --depth=1 -b bka frameworks/native
@@ -71,9 +71,6 @@ git clone https://github.com/shinichi-c/frameworks_base_evo --depth=1 -b bka_new
 git clone https://github.com/Linux-on-droid/libhybris --depth=1 -b tmp external/libhybris
 git clone https://github.com/shinichi-c/vendor_lindroid --depth=1 -b lindroid-22.1 vendor/lindroid
 git clone https://github.com/Linux-on-droid/external_lxc --depth=1 -b lindroid-21 external/lxc
-
-# bionic
-git clone https://github.com/deadzone12456/bionic --depth=1 -b bka bionic
 
 #lunch
 source build/envsetup.sh
