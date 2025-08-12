@@ -62,7 +62,7 @@ git clone https://github.com/shinichi-c/android_hardware_qcom-caf_common --depth
 
 # framework
 git clone https://github.com/shinichi-c/frameworks_native_evo16 --depth=1 -b bka frameworks/native
-git clone https://github.com/shinichi-c/frameworks_base_evo --depth=1 -b bka_new frameworks/base
+git clone https://github.com/shinichi-c/frameworks_base-L --depth=1 -b 16 frameworks/base
 
 # lindroid
 git clone https://github.com/Linux-on-droid/libhybris --depth=1 -b tmp external/libhybris
