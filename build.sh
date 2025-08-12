@@ -27,6 +27,7 @@ rm -rf vendor/lindroid
 rm -rf external/lxc
 rm -rf frameworks/native
 rm -rf frameworks/base
+rm -rf vendor/oneplus/camera
 
 # Clone repositories #
 
