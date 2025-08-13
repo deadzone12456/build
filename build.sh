@@ -17,7 +17,6 @@ rm -rf hardware/oneplus
 rm -rf hardware/qcom-caf/sdm845/audio
 rm -rf hardware/qcom-caf/sm8250/audio
 rm -rf hardware/qcom-caf/sm8250/display
-rm -rf hardware/qcom-caf/sdm845-next
 rm -rf device/lineage/sepolicy
 rm -rf device/qcom/sepolicy_vndr/legacy-um
 rm -rf hardware/qcom-caf/bootctrl
@@ -32,8 +31,8 @@ rm -rf vendor/oneplus/camera
 # Clone repositories #
 
 # Device
-git clone https://github.com/shinichi-c/android_device_oneplus_fajita_15 --depth=1 -b c2-markv2-L device/oneplus/fajita
-git clone https://github.com/shinichi-c/android_device_oneplus_sdm845-common_16 --depth=1 -b c2-markv2-L device/oneplus/sdm845-common
+git clone https://github.com/shinichi-c/android_device_oneplus_fajita_16 --depth=1 -b c2-markv2-L device/oneplus/fajita
+git clone https://github.com/shinichi-c/android_device_oneplus_sdm845-common_16 --depth=1 -b c2-markv3-L device/oneplus/sdm845-common
 
 # Vendor
 git clone https://github.com/TheMuppets/proprietary_vendor_oneplus_fajita --depth=1 -b lineage-22.2 vendor/oneplus/fajita
