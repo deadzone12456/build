@@ -29,6 +29,7 @@ rm -rf vendor/lindroid
 rm -rf external/lxc
 rm -rf frameworks/native
 rm -rf frameworks/base
+rm -rf frameworks/av
 
 # Clone repositories #
 
@@ -65,6 +66,7 @@ git clone https://github.com/shinichi-c/android_hardware_qcom-caf_common --depth
 # framework
 git clone https://github.com/shinichi-c/frameworks_native_evo16 --depth=1 -b bka frameworks/native
 git clone https://github.com/shinichi-c/frameworks_base_evo --depth=1 -b bka_new frameworks/base
+git clone https://github.com/shinichi-c/frameworks_av --depth=1 -b bka frameworks/av
 
 # lindroid
 git clone https://github.com/Linux-on-droid/libhybris --depth=1 -b tmp external/libhybris
