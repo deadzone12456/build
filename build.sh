@@ -20,7 +20,7 @@ rm -rf hardware/qcom-caf/sdm845/audio
 rm -rf hardware/qcom-caf/sm8250/audio
 rm -rf hardware/qcom-caf/sm8250/display
 rm -rf hardware/qcom-caf/sdm845-next
-rm -rf device/lineage/sepolicy
+rm -rf device/statix/sepolicy
 rm -rf device/qcom/sepolicy_vndr/legacy-um
 rm -rf hardware/qcom-caf/common
 
@@ -47,7 +47,7 @@ git clone https://github.com/shinichi-c/android_hardware_qcom_audio --depth=1 -b
 git clone https://github.com/shinichi-c/android_hardware_qcom_display --depth=1 -b markv1 hardware/qcom-caf/sm8250/display
 
 # Sepolicy
-git clone https://github.com/shinichi-c/android_device_lineage_sepolicy --depth=1 -b evox-16 device/lineage/sepolicy
+git clone https://github.com/shinichi-c/android_device_lineage_sepolicy --depth=1 -b evox-16 device/staitx/sepolicy
 git clone https://github.com/shinichi-c/android_device_qcom_sepolicy_vndr --depth=1 -b evox-16 device/qcom/sepolicy_vndr/legacy-um
 
 # qcom-caf_common
