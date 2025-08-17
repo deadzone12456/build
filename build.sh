@@ -3,7 +3,7 @@
 rm -rf prebuilts/clang/host/linux-x86
 
 # Repo Init
-repo init -u https://github.com/Evolution-X/manifest -b bka --git-lfs
+repo init -u https://github.com/StatiXOS/android_manifest.git -b bp2a
 
 # Sync the repositories
 /opt/crave/resync.sh
@@ -34,8 +34,8 @@ rm -rf frameworks/av
 # Clone repositories #
 
 # Device
-git clone https://github.com/shinichi-c/android_device_oneplus_fajita_15 --depth=1 -b Evo_16 device/oneplus/fajita
-git clone https://github.com/shinichi-c/android_device_oneplus_sdm845-common_16 --depth=1 -b c2-markv1 device/oneplus/sdm845-common
+git clone https://github.com/shinichi-c/android_device_oneplus_fajita_15 --depth=1 -b statix device/oneplus/fajita
+git clone https://github.com/shinichi-c/android_device_oneplus_sdm845-common_16 --depth=1 -b statix device/oneplus/sdm845-common
 
 # Vendor
 git clone https://github.com/TheMuppets/proprietary_vendor_oneplus_fajita --depth=1 -b lineage-22.2 vendor/oneplus/fajita
@@ -75,6 +75,7 @@ git clone https://github.com/Linux-on-droid/external_lxc --depth=1 -b lindroid-2
 
 #lunch
 source build/envsetup.sh
-lunch lineage_fajita-bp2a-userdebug
+. build/envsetup.sh
+brunch statix_fajita-bp2a-userdebug
 make installclean
 m evolution
