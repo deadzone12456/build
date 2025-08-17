@@ -56,6 +56,4 @@ git clone https://github.com/shinichi-c/android_hardware_qcom-caf_common --depth
 #lunch
 source build/envsetup.sh
 . build/envsetup.sh
-lunch statix_fajita-bp2a-userdebug
-make installclean
-m bacon
+brunch statix_fajita-bp2a-userdebug
