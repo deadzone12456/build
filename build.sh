@@ -22,14 +22,7 @@ rm -rf hardware/qcom-caf/sm8250/display
 rm -rf hardware/qcom-caf/sdm845-next
 rm -rf device/lineage/sepolicy
 rm -rf device/qcom/sepolicy_vndr/legacy-um
-rm -rf hardware/qcom-caf/bootctrl
 rm -rf hardware/qcom-caf/common
-rm -rf external/libhybris
-rm -rf vendor/lindroid
-rm -rf external/lxc
-rm -rf frameworks/native
-rm -rf frameworks/base
-rm -rf frameworks/av
 
 # Clone repositories #
 
@@ -57,21 +50,8 @@ git clone https://github.com/shinichi-c/android_hardware_qcom_display --depth=1 
 git clone https://github.com/shinichi-c/android_device_lineage_sepolicy --depth=1 -b evox-16 device/lineage/sepolicy
 git clone https://github.com/shinichi-c/android_device_qcom_sepolicy_vndr --depth=1 -b evox-16 device/qcom/sepolicy_vndr/legacy-um
 
-# bootctrl
-git clone https://github.com/shinichi-c/android_hardware_qcom_bootctrl --depth=1 -b lineage-22.2-caf hardware/qcom-caf/bootctrl
-
 # qcom-caf_common
 git clone https://github.com/shinichi-c/android_hardware_qcom-caf_common --depth=1 -b markv1 hardware/qcom-caf/common
-
-# framework
-git clone https://github.com/shinichi-c/frameworks_native_evo16 --depth=1 -b bka frameworks/native
-git clone https://github.com/shinichi-c/frameworks_base_evo --depth=1 -b bka_new frameworks/base
-git clone https://github.com/shinichi-c/frameworks_av --depth=1 -b bka frameworks/av
-
-# lindroid
-git clone https://github.com/Linux-on-droid/libhybris --depth=1 -b tmp external/libhybris
-git clone https://github.com/shinichi-c/vendor_lindroid --depth=1 -b lindroid-22.1 vendor/lindroid
-git clone https://github.com/Linux-on-droid/external_lxc --depth=1 -b lindroid-21 external/lxc
 
 #lunch
 source build/envsetup.sh
