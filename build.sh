@@ -23,6 +23,9 @@ rm -rf hardware/qcom-caf/sdm845-next
 rm -rf device/statix/sepolicy
 rm -rf device/qcom/sepolicy_vndr/legacy-um
 rm -rf hardware/qcom-caf/common
+rm -rf external/libhybris
+rm -rf vendor/lindroid
+rm -rf external/lxc
 
 # Clone repositories #
 
