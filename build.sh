@@ -20,8 +20,7 @@ rm -rf hardware/qcom-caf/sm8250/display
 rm -rf device/lineage/sepolicy
 rm -rf device/qcom/sepolicy_vndr/legacy-um
 rm -rf hardware/qcom-caf/common
-rm -rf hardware/qcom-caf/sm8450
-rm -rf hardware/qcom-caf/sm8550
+
 # Clone repositories #
 
 # Device
