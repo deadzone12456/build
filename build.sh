@@ -20,6 +20,14 @@ rm -rf hardware/qcom-caf/sm8250/display
 rm -rf device/lineage/sepolicy
 rm -rf device/qcom/sepolicy_vndr/legacy-um
 rm -rf hardware/qcom-caf/common
+rm -rf external/libhybris
+rm -rf vendor/lindroid
+rm -rf external/lxc
+rm -rf hardware/lineage/interfaces
+rm -rf hardware/interfaces
+rm -rf packages/apps/Settings
+rm -rf packages/apps/GameSpace
+rm -rf hardware/lineage/livedisplay
 
 # Clone repositories #
 
@@ -36,6 +44,8 @@ git clone https://github.com/shinichi-c/android_kernel_oneplus_sdm845 --depth=1 
 
 # Hardware
 git clone https://github.com/shinichi-c/android_hardware_oneplus --depth=1 -b lineage-23.0 hardware/oneplus
+git clone https://github.com/LineageOS/android_hardware_lineage_interfaces --depth=1 -b lineage-23.0 hardware/lineage/interfaces
+git clone https://github.com/LineageOS/android_hardware_interfaces --depth=1 -b lineage-23.0 hardware/interfaces
 
 # Hals
 git clone https://github.com/shinichi-c/android_hardware_qcom_audio --depth=1 -b markv1 hardware/qcom-caf/sdm845/audio
@@ -48,6 +58,10 @@ git clone https://github.com/shinichi-c/android_device_qcom_sepolicy_vndr --dept
 
 # qcom-caf_common
 git clone https://github.com/shinichi-c/android_hardware_qcom-caf_common --depth=1 -b markv1 hardware/qcom-caf/common
+
+# settings
+git clone https://github.com/shinichi-c/android_packages_apps_Settings --depth=1 -b 16 packages/apps/Settings
+git clone https://github.com/selfmusing/android_packages_apps_GameSpace --depth=1 -b 16 packages/apps/GameSpace
 
 #lunch
 source build/envsetup.sh
