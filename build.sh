@@ -67,6 +67,6 @@ git clone https://github.com/Linux-on-droid/external_lxc --depth=1 -b lindroid-2
 
 #lunch
 . build/envsetup.sh
-lunch lineage_fajita-bp2a-user
+lunch lineage_fajita-bp2a-userdebug
 make installclean
 m evolution
