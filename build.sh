@@ -31,7 +31,7 @@ rm -rf frameworks/base
 
 # Device
 git clone https://github.com/shinichi-c/android_device_oneplus_fajita_16 --depth=1 -b Evo_16 device/oneplus/fajita
-git clone https://github.com/shinichi-c/android_device_oneplus_sdm845-common_16 --depth=1 -b OCam-markv10_E device/oneplus/sdm845-common
+git clone https://github.com/shinichi-c/android_device_oneplus_sdm845-common_16 --depth=1 -b OCam-markv11_E device/oneplus/sdm845-common
 
 # Vendor
 git clone https://github.com/TheMuppets/proprietary_vendor_oneplus_fajita --depth=1 -b lineage-22.2 vendor/oneplus/fajita
@@ -54,7 +54,7 @@ git clone https://github.com/shinichi-c/android_device_lineage_sepolicy --depth=
 git clone https://github.com/shinichi-c/android_device_qcom_sepolicy_vndr --depth=1 -b evox-16 device/qcom/sepolicy_vndr/legacy-um
 
 # qcom-caf_common
-git clone https://github.com/shinichi-c/android_hardware_qcom-caf_common --depth=1 -b markv4 hardware/qcom-caf/common
+git clone https://github.com/shinichi-c/android_hardware_qcom-caf_common --depth=1 -b markv5 hardware/qcom-caf/common
 
 # framework
 git clone https://github.com/shinichi-c/frameworks_native_evo16 --depth=1 -b bka2 frameworks/native
