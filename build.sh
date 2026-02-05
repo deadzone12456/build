@@ -21,16 +21,21 @@ rm -rf hardware/qcom-caf/sm8250/display
 rm -rf device/lineage/sepolicy
 rm -rf device/qcom/sepolicy_vndr/legacy-um
 rm -rf hardware/qcom-caf/common
+rm -rf external/libhybris
+rm -rf vendor/lindroid
+rm -rf external/lxc
+rm -rf frameworks/native
+rm -rf frameworks/base
 
 # Clone repositories #
 
 # Device
 git clone https://github.com/shinichi-c/android_device_oneplus_fajita_16 --depth=1 -b Evo_16 device/oneplus/fajita
-git clone https://github.com/shinichi-c/android_device_oneplus_sdm845-common_16 --depth=1 -b Qpr2-markv15_E device/oneplus/sdm845-common
+git clone https://github.com/shinichi-c/android_device_oneplus_sdm845-common_16 --depth=1 -b Qpr2-markv16_E device/oneplus/sdm845-common
 
 # Vendor
 git clone https://github.com/TheMuppets/proprietary_vendor_oneplus_fajita --depth=1 -b lineage-22.2 vendor/oneplus/fajita
-git clone https://github.com/shinichi-c/proprietary_vendor_oneplus_sdm845-common --depth=1 -b Qpr2_markv6 vendor/oneplus/sdm845-common
+git clone https://github.com/shinichi-c/proprietary_vendor_oneplus_sdm845-common --depth=1 -b Qpr2_markv7 vendor/oneplus/sdm845-common
 
 # Kernel
 git clone https://github.com/shinichi-c/android_kernel_oneplus_sdm845 --depth=1 -b markv6 kernel/oneplus/sdm845
@@ -49,6 +54,15 @@ git clone https://github.com/shinichi-c/android_device_qcom_sepolicy_vndr --dept
 
 # qcom-caf_common
 git clone https://github.com/shinichi-c/android_hardware_qcom-caf_common --depth=1 -b markv6 hardware/qcom-caf/common
+
+# framework
+git clone https://github.com/shinichi-c/frameworks_native_evo16 --depth=1 -b bp2 frameworks/native
+git clone https://github.com/shinichi-c/frameworks_base_evoX --depth=1 -b bq2 frameworks/base
+
+# lindroid
+git clone https://github.com/Linux-on-droid/libhybris --depth=1 -b tmp external/libhybris
+git clone https://github.com/shinichi-c/vendor_lindroid --depth=1 -b lindroid-23.0 vendor/lindroid
+git clone https://github.com/Linux-on-droid/external_lxc --depth=1 -b lindroid-21 external/lxc
 
 #lunch
 . build/envsetup.sh
