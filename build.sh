@@ -30,18 +30,18 @@ rm -rf frameworks/base
 # Clone repositories #
 
 # Device
-git clone https://github.com/shinichi-c/android_device_oneplus_fajita_16 --depth=1 -b Evo_16 device/oneplus/fajita
-git clone https://github.com/shinichi-c/android_device_oneplus_sdm845-common_16 --depth=1 -b Qpr2-markv17_E device/oneplus/sdm845-common
+git clone https://github.com/shinichi-c/android_device_oneplus_fajita_16 --depth=1 -b Qpr2-mark device/oneplus/fajita
+git clone https://github.com/shinichi-c/android_device_oneplus_sdm845-common_16 --depth=1 -b Qpr2-markv18_E device/oneplus/sdm845-common
 
 # Vendor
 git clone https://github.com/TheMuppets/proprietary_vendor_oneplus_fajita --depth=1 -b lineage-22.2 vendor/oneplus/fajita
 git clone https://github.com/EdwinMoq/proprietary_vendor_oneplus_sdm845-common --depth=1 -b lineage-23.2-4.19 vendor/oneplus/sdm845-common
 
 # Kernel
-git clone https://github.com/shinichi-c/android_kernel_oneplus_sdm845 --depth=1 -b markv6 kernel/oneplus/sdm845
+git clone https://github.com/shinichi-c/android_kernel_oneplus_sdm845 --depth=1 -b markv7 kernel/oneplus/sdm845
 
 # Hardware
-git clone https://github.com/shinichi-c/android_hardware_oneplus --depth=1 -b Qpr1-markv4_E hardware/oneplus
+git clone https://github.com/shinichi-c/android_hardware_oneplus --depth=1 -b Qpr2-markv5_E hardware/oneplus
 
 # Hals
 git clone https://github.com/shinichi-c/android_hardware_qcom_audio --depth=1 -b markv1 hardware/qcom-caf/sdm845/audio
@@ -56,7 +56,7 @@ git clone https://github.com/shinichi-c/android_device_qcom_sepolicy_vndr --dept
 git clone https://github.com/shinichi-c/android_hardware_qcom-caf_common --depth=1 -b markv6 hardware/qcom-caf/common
 
 # framework
-git clone https://github.com/shinichi-c/frameworks_native_evo16 --depth=1 -b bp2 frameworks/native
+git clone https://github.com/shinichi-c/frameworks_native_evo16 --depth=1 -b bq2 frameworks/native
 git clone https://github.com/shinichi-c/frameworks_base_evoX --depth=1 -b bq2 frameworks/base
 
 # lindroid
