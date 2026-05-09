@@ -18,7 +18,7 @@ rm -rf hardware/oneplus
 rm -rf hardware/qcom-caf/sdm845/audio
 rm -rf hardware/qcom-caf/sm8250/audio
 rm -rf hardware/qcom-caf/sm8250/display
-rm -rf device/lineage/sepolicy
+# rm -rf device/lineage/sepolicy
 rm -rf device/qcom/sepolicy_vndr/legacy-um
 rm -rf hardware/qcom-caf/common
 rm -rf external/libhybris
@@ -30,39 +30,39 @@ rm -rf frameworks/base
 # Clone repositories #
 
 # Device
-git clone https://github.com/shinichi-c/android_device_oneplus_fajita_16 --depth=1 -b Qpr2-mark device/oneplus/fajita
-git clone https://github.com/shinichi-c/android_device_oneplus_sdm845-common_16 --depth=1 -b Qpr2-markv18_E device/oneplus/sdm845-common
+git clone https://github.com/shinichi-c/android_device_oneplus_fajita_16 --depth=1 -b Qpr2-mark2 device/oneplus/fajita
+git clone https://github.com/shinichi-c/android_device_oneplus_sdm845-common_16 --depth=1 -b Qpr2-markv20_E device/oneplus/sdm845-common
 
 # Vendor
 git clone https://github.com/TheMuppets/proprietary_vendor_oneplus_fajita --depth=1 -b lineage-22.2 vendor/oneplus/fajita
 git clone https://github.com/EdwinMoq/proprietary_vendor_oneplus_sdm845-common --depth=1 -b lineage-23.2-4.19 vendor/oneplus/sdm845-common
 
 # Kernel
-git clone https://github.com/shinichi-c/android_kernel_oneplus_sdm845 --depth=1 -b markv7 kernel/oneplus/sdm845
+git clone https://github.com/shinichi-c/android_kernel_oneplus_sdm845 --depth=1 -b markv8 kernel/oneplus/sdm845
 
 # Hardware
 git clone https://github.com/shinichi-c/android_hardware_oneplus --depth=1 -b Qpr2-markv5_E hardware/oneplus
 
 # Hals
 git clone https://github.com/shinichi-c/android_hardware_qcom_audio --depth=1 -b markv1 hardware/qcom-caf/sdm845/audio
-git clone https://github.com/shinichi-c/android_hardware_qcom_audio --depth=1 -b markE1 hardware/qcom-caf/sm8250/audio
-git clone https://github.com/shinichi-c/android_hardware_qcom_display --depth=1 -b markE1 hardware/qcom-caf/sm8250/display
+git clone https://github.com/shinichi-c/android_hardware_qcom_audio --depth=1 -b markE2 hardware/qcom-caf/sm8250/audio
+git clone https://github.com/shinichi-c/android_hardware_qcom_display --depth=1 -b markE2 hardware/qcom-caf/sm8250/display
 
 # Sepolicy
-git clone https://github.com/shinichi-c/device_evolution_sepolicy.git --depth=1 -b bq2 device/lineage/sepolicy
+# git clone https://github.com/shinichi-c/device_evolution_sepolicy.git --depth=1 -b bq2 device/lineage/sepolicy
 git clone https://github.com/shinichi-c/android_device_qcom_sepolicy_vndr --depth=1 -b lineage-23.2-legacy-um device/qcom/sepolicy_vndr/legacy-um
 
 # qcom-caf_common
 git clone https://github.com/shinichi-c/android_hardware_qcom-caf_common --depth=1 -b markv6 hardware/qcom-caf/common
 
 # framework
-git clone https://github.com/shinichi-c/frameworks_native_evo16 --depth=1 -b bq2 frameworks/native
-git clone https://github.com/shinichi-c/frameworks_base_evoX --depth=1 -b bq2_n frameworks/base
+git clone https://github.com/Evolution-X/frameworks_native --depth=1 -b bq2 frameworks/native
+git clone https://github.com/Evolution-X/frameworks_base --depth=1 -b bq2 frameworks/base
 
 # lindroid
-git clone https://github.com/Linux-on-droid/libhybris --depth=1 -b tmp external/libhybris
-git clone https://github.com/shinichi-c/vendor_lindroid --depth=1 -b lindroid-23.2 vendor/lindroid
-git clone https://github.com/Linux-on-droid/external_lxc --depth=1 -b lindroid-21 external/lxc
+# git clone https://github.com/Linux-on-droid/libhybris --depth=1 -b tmp external/libhybris
+# git clone https://github.com/shinichi-c/vendor_lindroid --depth=1 -b lindroid-23.2 vendor/lindroid
+# git clone https://github.com/Linux-on-droid/external_lxc --depth=1 -b lindroid-21 external/lxc
 
 #lunch
 . build/envsetup.sh
