@@ -12,7 +12,6 @@ rm -rf device/oneplus/fajita
 rm -rf device/oneplus/sdm845-common
 rm -rf vendor/oneplus/fajita
 rm -rf vendor/oneplus/sdm845-common
-rm -rf vendor/oneplus/camera
 rm -rf kernel/oneplus/sdm845
 rm -rf hardware/oneplus
 rm -rf hardware/qcom-caf/sm8250/audio
