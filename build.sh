@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Repo Init
-repo init -u https://github.com/Evolution-X/manifest -b cnb --git-lfs
+repo init --depth=1 -u https://github.com/Evolution-X/manifest -b cnb --git-lfs
 
 # Sync the repositories
 /opt/crave/resync.sh
