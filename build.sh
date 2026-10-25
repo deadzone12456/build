@@ -7,7 +7,6 @@ repo init --depth=1 -u https://github.com/Evolution-X/manifest -b cnb --git-lfs
 /opt/crave/resync.sh
 
 # Remove existing directories
-
 rm -rf device/oneplus/fajita
 rm -rf device/oneplus/sdm845-common
 rm -rf vendor/oneplus/fajita
@@ -30,16 +29,21 @@ git clone https://github.com/EdwinMoq/proprietary_vendor_oneplus_sdm845-common -
 # Kernel
 git clone https://github.com/shinichi-c/android_kernel_oneplus_sdm845 --depth=1 -b Evo12 kernel/oneplus/sdm845
 
+# KernelSU-Next Integration
+pushd kernel/oneplus/sdm845
+curl -LSs "https://raw.githubusercontent.com/KernelSU-Next/KernelSU-Next/next/kernel/setup.sh" | bash -s legacy
+popd
+
 # Hardware
 git clone https://github.com/shinichi-c/android_hardware_oneplus --depth=1 -b Evo12 hardware/oneplus
 
-# soong
+# Soong
 git clone https://github.com/shinichi-c/build_soong --depth=1 -b cnb build/soong
 
-# vendor
+# Vendor
 git clone https://github.com/shinichi-c/vendor_evolution --depth=1 -b Evo12 vendor/lineage
 
-#lunch
+# Lunch & Build
 . build/envsetup.sh
 lunch lineage_fajita-cp2a-userdebug
 make installclean
