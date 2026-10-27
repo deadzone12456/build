@@ -41,7 +41,7 @@ git clone https://github.com/shinichi-c/android_hardware_oneplus --depth=1 -b Ev
 git clone https://github.com/shinichi-c/build_soong --depth=1 -b cnb build/soong
 
 # Vendor
-git clone https://github.com/shinichi-c/vendor_evolution --depth=1 -b Evo12 vendor/lineage
+git clone https://github.com/shinichi-c/vendor_evolution --depth=1 -b EvoX12 vendor/lineage
 
 # Lunch & Build
 . build/envsetup.sh
