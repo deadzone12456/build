@@ -27,12 +27,7 @@ git clone https://github.com/TheMuppets/proprietary_vendor_oneplus_fajita --dept
 git clone https://github.com/EdwinMoq/proprietary_vendor_oneplus_sdm845-common --depth=1 -b lineage-24.0 vendor/oneplus/sdm845-common
 
 # Kernel
-git clone https://github.com/shinichi-c/android_kernel_oneplus_sdm845 --depth=1 -b Evo12 kernel/oneplus/sdm845
-
-# KernelSU-Next Integration
-pushd kernel/oneplus/sdm845
-curl -LSs "https://raw.githubusercontent.com/KernelSU-Next/KernelSU-Next/next/kernel/setup.sh" | bash -s legacy
-popd
+git clone https://github.com/shinichi-c/android_kernel_oneplus_sdm845 --depth=1 -b EvoX12 kernel/oneplus/sdm845
 
 # Hardware
 git clone https://github.com/shinichi-c/android_hardware_oneplus --depth=1 -b Evo12 hardware/oneplus
