@@ -33,7 +33,7 @@ git clone https://github.com/shinichi-c/android_kernel_oneplus_sdm845 --depth=1 
 git clone https://github.com/shinichi-c/android_hardware_oneplus --depth=1 -b Evo12 hardware/oneplus
 
 # Soong
-git clone https://github.com/shinichi-c/build_soong --depth=1 -b cnb build/soong
+git clone https://github.com/shinichi-c/build_soong --depth=1 -b cnb2 build/soong
 
 # Vendor
 git clone https://github.com/shinichi-c/vendor_evolution --depth=1 -b EvoX12 vendor/lineage
